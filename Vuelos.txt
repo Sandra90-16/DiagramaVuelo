@@ -1,0 +1,30 @@
+classDiagram
+Genero
+  Billete <|.. Vuelo
+  Persona "0..* viaja " --> "0..* " Vuelo
+  Vuelo "0..* es realizado " --> "1 " Avion
+  Billete <|.. Persona
+  	class Billete{
+  	-int asiento
+  	}
+	class Vuelo{
+		-int plazas
+		-date fecha
+	}
+	class Persona{
+		-String nombre
+		-String apellidos 
+    		-date fecha_nac
+   	        -Genero sexo
+	}
+	class Avion{
+		-String modelo
+		-int capacidad
+	}
+	class Genero{
+    -hombre
+    -mujer
+	<<enumeration>>
+  }		
+ 		
+ 
